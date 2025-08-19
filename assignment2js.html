@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // assignment1 starts
+
+        function Book(title, author, year) {
+            this.title = title;
+            this.author = author;
+            this.year = year;
+        }
+
+        const book1 = new Book("book1", "ahmed", 2018);
+        const book2 = new Book("book2", "mohamed", 2016);
+
+        console.log(book2.author);
+
+        // assignment1 ends
+
+
+
+
+
+        // assignment2 starts
+
+        class Animal {
+            constructor(name, type) {
+                this.name = name;
+                this.type = type;
+            }
+
+            speak() {
+                console.log(`${this.name} is a ${this.type}`);
+            }
+        }
+
+        const dog = new Animal("Buddy", "Dog");
+        dog.speak();
+
+        // assignment2 ends
+
+
+
+        // assignment3 starts
+
+        let cartItem = {
+            name: "phone",
+            price: 1000,
+            quantity: 2
+        };
+
+        function total() {
+            return cartItem.price * cartItem.quantity;
+        }
+        console.log(total());
+
+        // assignment3 ends
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

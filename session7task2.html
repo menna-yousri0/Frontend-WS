@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Countdown</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+    #countdown {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Event Countdown & Window Control</h1>
+  <div id="countdown">Countdown: 10</div>
+  <div id="messageBox"></div>
+
+  <button onclick="openWindow()">Open Event Info</button>
+  <button onclick="closeWindow()">Close</button>
+  <button onclick="focusWindow()">Focus</button>
+  <button onclick="scrollWindow()">Scroll</button>
+
+  <script>
+    let countdown = 10;
+    const countdownEl = document.getElementById("countdown");
+
+    const interval = setInterval(() => {
+      countdown--;
+      countdownEl.textContent = `Countdown: ${countdown}`;
+      if (countdown === 0) {
+        clearInterval(interval);
+      }
+    }, 1000);
+
+    setTimeout(() => {
+      document.getElementById("messageBox").textContent = "⏰ Reminder: 3 seconds left!";
+      alert("Reminder: Only 3 seconds left!");
+    }, 7000);
+
+    let eventWindow;
+
+    function openWindow() {
+      eventWindow = window.open("", "EventInfo", "width=400,height=300");
+      eventWindow.document.write("<h2>Event Info</h2><p>This is your event window.</p><div style='height:1000px;'></div>");
+    }
+
+    function closeWindow() {
+      if (eventWindow) eventWindow.close();
+    }
+
+    function focusWindow() {
+      if (eventWindow) eventWindow.focus();
+    }
+
+    function scrollWindow() {
+      if (eventWindow) eventWindow.scrollTo(0, 500);
+    }
+  </script>
+
+</body>
+</html>

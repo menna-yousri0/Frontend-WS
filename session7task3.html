@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Magic Card</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        }
+        .card {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        text-align: center;
+        }
+        button {
+        margin: 10px;
+        padding: 10px 15px;
+        font-size: 16px;
+        }
+    </style>    
+</head>
+<body>
+  <div class="card" id="magicCard">
+    <h2>Welcome to the Magic Card</h2>
+    <button onclick="changeBackground()">Change Background</button>
+    <button onclick="showWindowSize()">Show Window Size</button>
+    <p id="windowSize"></p>
+  </div>
+
+  <script>
+    function changeBackground() {
+      const colors = ["#f0f0f0", "#ffcccb", "#add8e6", "#90ee90"];
+      document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    function showWindowSize() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      document.getElementById("windowSize").textContent = `Window Size: ${width} x ${height}`;
+    }
+  </script>
+</body>
+</html>

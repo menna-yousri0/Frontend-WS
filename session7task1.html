@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome & User Data</title>
+</head>
+<body>
+  <h2>Welcome to the Tech Workshop</h2>
+  <p id="userInfo"></p>
+
+  <script>
+    
+    
+    alert("Welcome to the Tech Workshop!");
+
+
+    let userName = prompt("What's your name?");
+
+  
+    let register = confirm("Do you want to register?");
+
+    if (register) {
+    
+      localStorage.setItem("name", userName);
+      sessionStorage.setItem("registered", "true");
+    }
+
+  
+    if (sessionStorage.getItem("registered") === "true") {
+      document.getElementById("userInfo").innerText =
+        "User Info:\nName: " + localStorage.getItem("name");
+    }
+  </script>
+</body>
+</html>

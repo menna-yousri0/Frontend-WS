@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Form</title>
+  <style>
+    body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+.form-container {
+  /* background-color: rgb(188, 188, 224); */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  /* background-color: rgb(188, 188, 224); */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgb(213, 213, 247);
+}
+
+.checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0078D7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  /* cursor: pointer; */
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Responsive Form</h2>
+    <form>
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" required placeholder="Enter your first name">
+      </div>
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" required placeholder="Enter your last name">
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" required placeholder="Enter your email address">
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" required placeholder="Enter your phone number">
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" required placeholder="Create password">
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <input type="text" required placeholder="Enter your message">
+      </div>
+      <div class="form-group checkbox">
+        <label>
+          <input type="checkbox" required>
+          I agree to the terms and conditions
+        </label>
+      </div>
+      <button type="submit">Submit Form</button>
+    </form>
+  </div>
+</body>
+</html>
